@@ -24,13 +24,11 @@ Build dependencies (using package names as found in Fedora):
 or see `extra/travis-build` in the source tree for example installation
 commands. Once build deps are in place, run:
 
-    mkdir build
-    cd build
-    meson ..
-    ninja
-    ninja install
+    meson _build
+    ninja -C _build
+    ninja -C _build install
     # to set a custom installation directory run:
-    #   DESTDIR=<somedir> ninja install
+    #   DESTDIR=<somedir> ninja -C _build install
 
 # Configuration
 
