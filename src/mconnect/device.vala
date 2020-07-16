@@ -300,15 +300,12 @@ class Device : Object {
     /**
      * maybe_pair:
      *
-     * Trigger pairing or call handle_pair() if already paired.
+     * Trigger pairing if not already paired.
      */
     public void maybe_pair () {
         if (is_paired == false) {
             if (_pair_in_progress == false)
                 this.pair.begin ();
-        } else {
-            // we are already paired
-            handle_pair (true);
         }
     }
 
